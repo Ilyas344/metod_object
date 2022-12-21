@@ -32,11 +32,15 @@ public class Book {
     }
 
     public boolean equals(Object other) {
-        if (this.getClass() != other.getClass()) {
+
+
+        if (this == null || this.getClass() != other.getClass()) {
             return false;
         }
-        Book c2 = (Book) other;
-        return bookName.equals(c2.bookName);
+        Book otherBook = (Book) other;
+
+        return (bookName.equals(otherBook.bookName)) && (author.equals(otherBook.author()));
+
     }
 
     public int hashCode() {

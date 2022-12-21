@@ -6,7 +6,8 @@ public class Main {
         Author philip = new Author("Филипп", "Пульман");
         Book bookOne = new Book("Темные начала", 1995, philip);
         Book bookTwo = new Book("Игра престолов", 1996, george);
-        Book bookThre = new Book("Игра престолов", 1996, george2);
+        Book bookThre = new Book("Игра престолов", 1996, philip);
+        Book bookFor = new Book("Игра престолов", 1996, george2);
         System.out.println(bookOne);
         System.out.println(bookTwo);
         bookOne.setPublishingYear(1997);
@@ -17,8 +18,11 @@ public class Main {
         System.out.println(bookTwo);
         System.out.print("Одинаковые книги: " + bookTwo.getBookName() + " и " + bookThre.getBookName() + " ");
         System.out.println(bookThre.equals(bookTwo));
+        System.out.print("Одинаковые книги: " + bookTwo.getBookName() + " и " + bookFor.getBookName() + " ");
+        System.out.println(bookFor.equals(bookTwo));
         System.out.print("Имена авторов совпадают ");
         System.out.println(george.equals(george2));
+
 
     }
 }

@@ -1,5 +1,6 @@
 public class Author {
 
+    private boolean equals;
     private String name;
     private String surname;
 
@@ -22,7 +23,8 @@ public class Author {
     }
 
     public boolean equals(Object other) {
-        if (this.getClass() != other.getClass()) {
+
+        if (this == null || this.getClass() != other.getClass()) {
             return false;
         }
         Author c2 = (Author) other;
@@ -30,8 +32,9 @@ public class Author {
     }
 
     public int hashCode() {
-        return java.util.Objects.hash(name + surname);
+        return java.util.Objects.hash(name, surname);
 
     }
+
 
 }
